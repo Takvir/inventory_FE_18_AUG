@@ -1,0 +1,77 @@
+<div>
+
+  <div class="form-container">
+    <h4 class="text-center text-gray-600  ">Branch Asset Check</h4>
+    <form [formGroup]="assetForm" (ngSubmit)="loadAssets()" class="asset-form">
+      <div class="form-group">
+        <select formControlName="branchId" id="branch" class="form-control" (change)="onBranchChange($event)">
+          <option value="">Select Branch</option>
+          <option *ngFor="let branch of branches" [value]="branch.branch_id">{{ branch.branch_name }}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <select formControlName="subBranch" id="subBranch" class="form-control">
+          <option value="">Select Division</option>
+          <option *ngFor="let option of subBranchOptions" [value]="option">{{ option }} </option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <select formControlName="groupId" id="group" class="form-control">
+          <option value="">Select Group</option>
+          <option *ngFor="let group of groups" [value]="group.group_id">{{ group.group_name }}</option>
+        </select>
+      </div>
+
+      <button
+        type="submit"
+        class="submit-button"
+        [disabled]="isBranchUser && !assetForm.get('branchId')?.value">
+        Load Assets
+      </button>
+    </form>
+  </div>
+
+  <div *ngIf="assets.length > 0">
+  
+    <table class="asset-table">
+      <thead>
+        <tr>
+          <th>Branch Name</th>
+          <th>Group Name</th>
+          <th>Desktop Name</th>
+          <th>Configuration</th>
+          <th>Tag Name</th>
+          <th>Warranty</th>
+          <th>Price</th>
+          <th>Purchase Date</th>
+          <th>Status</th>
+          <th>Serial Number</th>
+          <th>Sub Branch</th>
+          <th>Asset Value</th> <!-- New Column -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let asset of assets">
+          <td>{{ asset.branch_name }}</td>
+          <td>{{ asset.group_name }}</td>
+          <td>{{ asset.desktop_name }}</td>
+          <td>{{ asset.configuration }}</td>
+          <td [ngClass]="{'text-red-500': isFAD(asset.tag_name)}">{{ asset.tag_name }}</td>
+          <td>{{ asset.warranty | date }}</td>
+          <td>{{ asset.price }}</td>
+          <td>{{ asset.purchase_date | date }}</td>
+          <td>{{ asset.status }}</td>
+          <td>{{ asset.serial_number }}</td>
+          <td>{{ asset.sub_branch }}</td>
+          <td>{{ calculateAssetValue(asset.purchase_date, asset.price) }}</td> <!-- New Column Value -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="noDataFound" class="no-data">
+    No assets found.
+  </div>
+</div>

@@ -1,0 +1,58 @@
+<div>
+  <div class="text-center mb-4">
+    <h1 class="text-xl font-bold mb-2 inline-block border-b-2 border-gray-300">Asset Group</h1>
+  </div>
+  <button (click)="openModal()" class="bg-green-900 text-white px-4 py-2 rounded hover:bg-green-600 transition">
+    Add New Group
+  </button>
+  <table class="min-w-full bg-white border border-gray-200 mt-4 text-center">
+    <thead>
+      <tr class="bg-gray-100 text-gray-600 border-b text-center">
+        <th class="py-1 px-2 ">Group ID</th>
+        <th class="py-1 px-4 ">Group Name</th>
+        <th class="py-1 px-4 ">Stock In Hand</th>
+        <th class="py-1 px-4 ">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let group of groups" class="border-b hover:bg-gray-50">
+        <td class="py-1 px-4">{{ group.group_id }}</td>
+        <td class="py-1 px-4">{{ group.group_name }}</td>
+        <td class="py-1 px-4">{{ group.stock_in_hand }}</td>
+        <td class="py-1 px-4">
+          <button (click)="openModal(group)" class="bg-green-900 text-white px-4 rounded hover:bg-yellow-600 transition">
+            Edit
+          </button>
+          <!-- <button (click)="deleteGroup(group.group_id)" class="bg-red-700 text-white px-3  rounded hover:bg-red-500 transition ml-2">
+            Delete
+          </button> -->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Modal -->
+  <div *ngIf="isModalOpen" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50">
+    <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full">
+      <h2 class="text-xl font-semibold mb-4">{{ selectedGroup ? 'Update Group' : 'Add New Group' }}</h2>
+      <form [formGroup]="groupForm" (ngSubmit)="selectedGroup ? updateGroup() : addGroup()">
+        <label class="block mb-2">
+          <span class="text-gray-700">Group Name:</span>
+          <input formControlName="group_name" class="mt-1 block w-full border border-gray-300 py-1  " />
+        </label>
+        <label class="block mb-4">
+          <span class="text-gray-700">Stock In Hand:</span>
+          <input formControlName="stock_in_hand" type="number" class="mt-1 block w-full border border-gray-300 py-1" />
+        </label>
+        <div class="flex justify-end space-x-4">
+          <button type="submit" class="bg-green-900 text-white px-4 py-2 rounded hover:bg-green-800 transition">
+            {{ selectedGroup ? 'Update' : 'Add' }} Group
+          </button>
+          <button type="button" (click)="closeModal()" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 transition">
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

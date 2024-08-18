@@ -1,0 +1,59 @@
+<div class="asset-container">
+  <!-- Page Header -->
+  <div class="text-center mb-4">
+    <h1 class="text-xl font-bold mb-2 inline-block border-b-2 border-gray-300">All Asset</h1>
+  </div>
+
+  <!-- Search Input -->
+  <div class="search-container">
+    <input type="text" [(ngModel)]="searchQuery" (ngModelChange)="onSearchQueryChange()" placeholder="Search assets..." class="search-input">
+  </div>
+
+  <!-- Download Button -->
+
+
+
+  <!-- Table Container -->
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Sl No.</th>
+          <th>Branch Name</th>
+          <th>Sub Branch Name</th>
+          <th>Group Name</th>
+          <th>Desktop Name</th>
+          <th>Configuration</th>
+          <th>Price</th>
+          <th>Serial Number</th>
+          <th>Warranty</th>
+          <th>Purchase Date</th>
+          <th>Status</th>
+          <th>Asset Get By</th>
+          <th>Tag Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let asset of filteredAssets; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ asset.branch_name }}</td>
+          <td>{{ asset.sub_branch }}</td>
+          <td>{{ asset.group_name }}</td>
+          <td>{{ asset.desktop_name }}</td>
+          <td>{{ asset.configuration }}</td>
+          <td>{{ asset.price }}</td>
+          <td>{{ asset.serial_number }}</td>
+          <td>{{ asset.warranty | date }}</td>
+          <td>{{ asset.purchase_date | date }}</td>
+          <td>{{ asset.status }}</td>
+          <td>{{ asset.asset_get_by }}</td>
+          <td>{{ asset.tag_name }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="download-container">
+    <button (click)="downloadTableData()" class="download-button">Download</button>
+  </div>
+</div>

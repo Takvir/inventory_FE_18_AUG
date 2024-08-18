@@ -1,0 +1,130 @@
+/* asset-branch.component.css */
+
+/* Full-width form container */
+.form-container {
+  width: 100%;
+  max-width: 1200px; /* Adjust as needed */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* Flex layout for the form */
+.asset-form {
+  display: flex;
+  flex-wrap: wrap; /* Wrap form elements to new line if needed */
+  gap: 16px; /* Space between form elements */
+}
+
+/* Full-width form groups */
+.form-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Form labels */
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Form controls */
+.form-control {
+  width: 100%; /* Adjusted width to full container */
+  padding: 7px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Focus state for form controls */
+.form-control:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+/* Submit button */
+.submit-button {
+  padding: 8px 12px; /* Adjusted padding for smaller height */
+  border: none;
+  border-radius: 4px;
+  background-color: #02724b;
+  color: #fff;
+  font-size: 14px; /* Adjusted font size to match form controls */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-start; /* Adjust alignment if needed */
+}
+
+/* Submit button hover effect */
+.submit-button:hover {
+  background-color: #025c40; /* Slightly darker shade on hover */
+}
+
+/* Disabled submit button */
+.submit-button:disabled {
+  background-color: #b3b3b3; /* Gray color for disabled state */
+  color: #666; /* Darker gray for text */
+  cursor: not-allowed; /* Change cursor to indicate disabled state */
+  transition: none; /* Remove transition effect for disabled state */
+}
+
+/* Table styling */
+.asset-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Table headers and cells */
+.asset-table th, .asset-table td {
+  border: 1px solid #ddd;
+  padding: 6px; /* Adjusted padding */
+  text-align: left;
+  font-size: 12px; /* Smaller text size */
+}
+
+/* Table header styling */
+.asset-table th {
+  background-color: #f4f4f4;
+  color: #333;
+  font-size: 14px; /* Smaller header text size */
+  font-weight: bold;
+}
+
+/* Zebra striping for rows */
+.asset-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Hover effect for rows */
+.asset-table tr:hover {
+  background-color: #ddd;
+}
+
+/* No data message */
+.no-data {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #baffc9;
+  border: 1px solid #ffccd5;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 18px; /* Adjusted font size */
+  color: #d9534f;
+  font-weight: bold;
+}
+.branch-heading {
+  text-align: center; /* Center the text */
+  font-size: 24px; /* Font size */
+  font-weight: bold; /* Make the font bold */
+  margin: 10px 0; /* Space above and below the heading */
+  border-bottom: 2px solid #c2c2c2; /* Underline color and thickness */
+  padding-bottom: 10px; /* Space between text and underline */
+}

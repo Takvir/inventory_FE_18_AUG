@@ -1,0 +1,114 @@
+/* main.css */
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  background-color: #ffffffe8;
+  color: rgb(0, 0, 0);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+header .text-3xl {
+  font-size: 1.5rem;
+}
+
+header img {
+  height: 40px;
+}
+
+nav{
+  font-family: Georgia, serif;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+
+header nav ul li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+}
+
+header nav ul li a:hover {
+  background-color: #4a5568;
+}
+
+header button svg {
+  fill: white;
+}
+
+.flex {
+  display: flex;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.w-60 {
+  width: 15rem;
+}
+
+.bg-cyan-900 {
+  background-color: #045d56;
+}
+
+.text-white {
+  color: white;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.border-b {
+  border-bottom-width: 1px;
+}
+
+.border-gray-700 {
+  border-color: #4a5568;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.hover\:bg-cyan-700:hover {
+  background-color: #036666;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.bg-gray-100 {
+  background-color: #f7fafc;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.bg-cyan-700 {
+  background-color: #034536;
+  color: rgb(247, 255, 3);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}

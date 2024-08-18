@@ -1,0 +1,135 @@
+<!-- Navbar Component -->
+<app-navbar *ngIf="!isLoginPage"></app-navbar>
+
+<!-- Main Content -->
+<div class="flex h-screen" *ngIf="!isLoginPage">
+  <!-- Sidebar -->
+  <div class="w-60 bg-cyan-900 text-white flex flex-col h-screen">
+    <!-- Sidebar Logo -->
+    <div class="flex items-center justify-center mt-4">
+      <img class="w-36" src="assets/logo.png" alt="Logo">
+    </div>
+    <!-- Sidebar Title -->
+    <div class="p-4 text-center border-b border-gray-700 mt-12">
+      <h2 class="text-xl font-base ">{{ userType === 'branch' ? 'Branch User' : 'SUPERADMIN' }}</h2>
+    </div>
+    <!-- Sidebar Menu -->
+    <nav class="flex-1">
+      <ul class="text-base">
+        <!-- Conditional Links Based on User Type -->
+
+
+        <li class="border-b border-gray-700 text-sm" *ngIf="userType !== 'branch'">
+          <a routerLink="/branch-list" routerLinkActive="font-bold bg-cyan-700" class="block py-3 px-4 hover:bg-cyan-700 flex items-center">
+            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 6h18M3 14h18m-8 4H5v-5h10v5zM4 5V4a1 1 0 011-1h14a1 1 0 011 1v1M7 7v2M7 11v2m0-2v2m3-6v6m-3-6v6m6-6v6" />
+            </svg>
+            BRANCH
+          </a>
+        </li>
+        <li class="border-b border-gray-700 text-sm">
+          <a routerLink="/equipment" routerLinkActive="font-bold bg-cyan-700" class="block py-3 px-4 hover:bg-cyan-700 flex items-center">
+            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16M4 5v14a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H6a2 2 0 00-2 2z" />
+            </svg>
+            NEW ASSET ADD
+          </a>
+        </li>
+        <li class="border-b border-gray-700 text-sm">
+          <a routerLink="/old-entry" routerLinkActive="font-bold bg-cyan-700" class="block py-3 px-4 hover:bg-cyan-700 flex items-center">
+            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16M4 5v14a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H6a2 2 0 00-2 2z" />
+            </svg>
+            OLD ASSET ADD
+          </a>
+        </li>
+        <li class="border-b border-gray-700 text-sm" *ngIf="userType !== 'branch'">
+          <a routerLink="/update-asset" routerLinkActive="font-bold bg-cyan-700" class="block py-3 px-4 hover:bg-cyan-700 flex items-center">
+            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20h9" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 15l6-6 1 1-6 6-1-1zM4 19v-1a2 2 0 012-2h1.586a2 2 0 001.414-.586L17 6l1 1-10 10a2 2 0 00-.586 1.414V17a2 2 0 01-2 2H4z" />
+            </svg>
+            UPDATE ASSET
+          </a>
+        </li>
+        
+
+        <li class="border-b border-gray-700 text-sm">
+          <a routerLink="/branch-asset" routerLinkActive="font-bold bg-cyan-700" class="block py-3 px-4 hover:bg-cyan-700 flex items-center">
+            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12h18M3 6h18M3 18h18M7 12v6m6-6v6m6-6v6" />
+            </svg>
+            BRANCH ASSET
+          </a>
+        </li>
+        <li class="border-b border-gray-700 text-sm" *ngIf="userType !== 'branch'">
+          <a routerLink="/group-add" routerLinkActive="font-bold bg-cyan-700" class="block py-3 px-4 hover:bg-cyan-700 flex items-center">
+            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5v14a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2z" />
+            </svg>
+            ASSET GROUP
+          </a>
+        </li>
+        <li class="border-b border-gray-700 text-sm">
+          <a routerLink="/tag-entry" routerLinkActive="font-bold bg-cyan-700" class="block py-3 px-4 hover:bg-cyan-700 flex items-center">
+            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5h7M14 10h7M14 15h7M14 20h7M5 20h7m-7-5h7M5 10h7M5 5h7m0 0V4a1 1 0 00-1-1H4a1 1 0 00-1 1v1" />
+            </svg>
+            FAD TAG
+          </a>
+        </li>
+        <!-- Report Dropdown -->
+        <li class="relative text-sm" *ngIf="userType !== 'branch'">
+          <button (click)="toggleReport()" class="block py-4 px-2 w-full text-center hover:bg-cyan-700 focus:outline-none flex items-center justify-between">
+            <span class="ml-5">REPORT</span>
+            <svg [ngClass]="{'rotate-180': reportOpen}" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <ul [ngClass]="{'hidden': !reportOpen}" class="bg-cyan-800 border border-gray-700 mt-1 text-sm">
+            <li><a routerLink="/summary" routerLinkActive="font-bold bg-cyan-700" class="block py-3 px-4 hover:bg-cyan-700">SUMMARY REPORT</a></li>
+            <li><a routerLink="/stock-report" routerLinkActive="font-bold bg-cyan-700" class="block py-3 px-4 hover:bg-cyan-700">STOCK REPORT</a></li>
+            <li class="border-b border-gray-700"><a routerLink="/all-asset" routerLinkActive="font-bold bg-cyan-700" class="block py-3 px-4 hover:bg-cyan-700">ALL INFORMATION</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+  </div>
+
+  <!-- Main Content Area -->
+  <div class="w-full">
+    <!-- Header -->
+    <header class="bg-green-200 text-white p-2 flex justify-between items-center">
+      <div class="md:hidden">
+        <button (click)="toggleNav()" class="focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+      <nav [ngClass]="{'hidden': !navOpen, 'block': navOpen}" class="w-full md:flex md:items-center md:w-auto">
+        <ul class="flex flex-col md:flex-row md:space-x-4 mt-4 md:mt-0">
+          <li class="text-center"><a class="block py-2 px-4 text-xl font-serif text-center">Welcome To ICT Inventory Management</a></li>
+        </ul>
+      </nav>
+      <nav [ngClass]="{'hidden': !navOpen, 'block': navOpen}" class="w-full md:flex md:items-center md:w-auto">
+        <ul class="flex flex-col md:flex-row md:space-x-4 mt-4 md:mt-0 sing-out">
+          <li><a (click)="signOut()" style=" box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;" class="block  px-4  rounded-md text-white sing-out">Log Out <i class="fa fa-sign-out" style="font-size:15px"></i></a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Router Outlet -->
+    <div class="flex-1 bg-gray-100 p-6 overflow-hidden">
+
+   
+        <router-outlet></router-outlet>
+ 
+    </div>
+    
+  </div>
+</div>
+
+<!-- Login Page -->
+<app-login *ngIf="isLoginPage"></app-login>

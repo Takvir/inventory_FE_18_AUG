@@ -1,0 +1,33 @@
+/* styles.css */
+.container {
+  max-width: 90%; /* Adjust width as needed */
+}
+
+.branch-heading {
+  font-size: 1.25rem; /* Adjust font size for the heading */
+}
+
+.table-container {
+  
+  max-height: 450px; /* Adjust the height to make table scrollable */
+  overflow-y: auto; /* Enable vertical scrolling */
+  border: 1px solid #1a7e2c; /* Add border if needed */
+  
+}
+
+th,
+td {
+  padding: 6px 8px; /* Increased padding for better readability */
+  border: 1px solid #e0e0e0;
+  text-align: left;
+  font-size: 12px;
+}
+
+th {
+  background-color: #b3ebb8; /* Lighter background for header */
+  position: sticky;
+  top: 0;
+  z-index: 2; /* Higher z-index for header */
+  font-weight: 600; /* Bold header text */
+  text-align: left;
+}

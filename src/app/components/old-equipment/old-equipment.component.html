@@ -1,0 +1,104 @@
+<div class="asset-container">
+    <h1 class="branch-heading">Existing Asset </h1>
+  
+    <form [formGroup]="assetForm" (ngSubmit)="onSubmit()" style="margin-top:40px">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="branch_id">Branch:</label>
+          <select formControlName="branch_id" id="branch_id" class="form-control" (change)="onBranchChange($event)" required>
+            <option *ngFor="let branch of branches" [value]="branch.branch_id">{{ branch.branch_name }}</option>
+          </select>
+        </div>
+  
+        <div class="form-group">
+          <label for="branch_name">Branch Name:</label>
+          <input id="branch_name" formControlName="branch_name" class="form-control" readonly>
+        </div>
+      </div>
+  
+      <div class="form-row">
+        <div class="form-group">
+          <label for="sub_branch">Sub Branch:</label>
+          <select id="sub_branch" formControlName="sub_branch" class="form-control">
+            <option *ngFor="let option of subBranchOptions" [value]="option">{{ option }}</option>
+          </select>
+        </div>
+  
+        <div class="form-group">
+          <!-- Empty div for alignment or future use -->
+        </div>
+      </div>
+  
+      <div class="form-row">
+        <div class="form-group">
+          <label for="group_id">Group:</label>
+          <select formControlName="group_id" id="group_id" class="form-control" required>
+            <option *ngFor="let group of groups" [value]="group.group_id">{{ group.group_name }}</option>
+          </select>
+        </div>
+  
+        <div class="form-group">
+          <label for="desktop_name">Device Name:</label>
+          <input id="desktop_name" formControlName="desktop_name" class="form-control">
+        </div>
+      </div>
+  
+      <div class="form-row">
+        <div class="form-group">
+          <label for="configuration">Model Name / Configuration:</label>
+          <input id="configuration" formControlName="configuration" class="form-control">
+        </div>
+  
+        <div class="form-group">
+          <label for="tag_name">Tag Name:</label>
+          <input id="tag_name" formControlName="tag_name" class="form-control">
+        </div>
+      </div>
+  
+      <div class="form-row">
+        <div class="form-group">
+          <label for="warranty">Warranty:</label>
+          <input id="warranty" formControlName="warranty" class="form-control" type="date">
+        </div>
+  
+        <div class="form-group">
+          <label for="price">Price:</label>
+          <input id="price" formControlName="price" class="form-control">
+        </div>
+      </div>
+  
+      <div class="form-row">
+        <div class="form-group">
+          <label for="purchase_date">Purchase Date:</label>
+          <input id="purchase_date" formControlName="purchase_date" type="date" class="form-control">
+        </div>
+  
+        <div class="form-group">
+          <label for="status">Status:</label>
+          <select id="status" formControlName="status" class="form-control">
+            <option value="Active">Active</option>
+            <option value="InActive">InActive</option>
+            <option value="Faulty">Faulty</option>
+          </select>
+        </div>
+      </div>
+  
+      <div class="form-row">
+        <div class="form-group">
+          <label for="asset_get_by">Purchase From:</label>
+          <input id="asset_get_by" formControlName="asset_get_by" class="form-control">
+        </div>
+  
+        <div class="form-group">
+          <label for="serial_number">Serial Number:</label>
+          <input id="serial_number" formControlName="serial_number" class="form-control">
+        </div>
+      </div>
+  
+      <!-- Submit Button -->
+      <button type="submit" class="submit-button" [ngClass]="{'disabled-button': assetForm.invalid}">
+        {{ isEdit ? 'Update Asset' : 'Add Asset' }}
+      </button>
+    </form>
+  </div>
+  

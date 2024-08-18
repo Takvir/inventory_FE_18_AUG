@@ -1,0 +1,145 @@
+/* asset-manager.component.css */
+.form-container {
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  .asset-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .form-group {
+    flex: 1;
+  }
+  
+  .form-group-inline {
+    flex: 1 1 0;
+  }
+  
+  .form-control {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px;
+    width: 100%;
+  }
+  
+  .submit-button {
+    padding: 8px 12px; /* Adjusted padding for smaller height */
+    border: none;
+    border-radius: 4px;
+    background-color: #02724b;
+    color: #fff;
+    font-size: 14px; /* Adjusted font size to match form controls */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start; /* Adjust alignment if needed */
+  }
+  
+  /* Submit button hover effect */
+  .submit-button:hover {
+    background-color: #025c40; /* Slightly darker shade on hover */
+  }
+  
+  /* Disabled submit button */
+  .submit-button:disabled {
+    background-color: #b3b3b3; /* Gray color for disabled state */
+    color: #666; /* Darker gray for text */
+    cursor: not-allowed; /* Change cursor to indicate disabled state */
+    transition: none; /* Remove transition effect for disabled state */
+  }
+  
+  .asset-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  /* Table headers and cells */
+  .asset-table th, .asset-table td {
+    border: 1px solid #ddd;
+    padding: 6px; /* Adjusted padding */
+    text-align: left;
+    font-size: 12px; /* Smaller text size */
+  }
+  
+  /* Table header styling */
+  .asset-table th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 14px; /* Smaller header text size */
+    font-weight: bold;
+  }
+  
+  /* Zebra striping for rows */
+  .asset-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Hover effect for rows */
+  .asset-table tr:hover {
+    background-color: #ddd;
+  }
+  
+  /* No data message */
+  .no-data {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #e2e2e2;
+    border: 1px solid #ffccd5;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 18px; /* Adjusted font size */
+    color: #d9534f;
+    font-weight: bold;
+  }
+  
+  .modal-overlay {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .btn-submit {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-submit:hover {
+    background-color: #45a049;
+  }
+  
+  .btn-cancel {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-cancel:hover {
+    background-color: #e53935;
+  }
+  

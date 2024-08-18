@@ -1,0 +1,168 @@
+/* Styling for the container */
+.asset-container {
+    padding: 10px;
+    max-width: 1300px; /* Adjust the width of the form container */
+    margin: 0 auto; /* Center the form container horizontally */
+    border: 1px solid #ddd; /* Light border around the container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #fff; /* White background for the container */
+  }
+  
+  /* Form heading */
+  .form-heading {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Flexbox for form rows */
+  .form-row {
+    display: flex;
+    flex-wrap: wrap; /* Allow rows to wrap */
+    justify-content: space-between; /* Space between columns */
+    margin-bottom: 10px; /* Space between rows */
+  }
+  
+  /* Form group styling */
+  .form-group {
+    flex: 1; /* Each form group takes equal space */
+    min-width: 200px; /* Minimum width to prevent too small fields */
+    margin-right: 10px; /* Space between form groups */
+  }
+  
+  .form-group:last-child {
+    margin-right: 0; /* Remove margin for the last element */
+  }
+  
+  /* Label styling */
+  label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  
+  /* Form control styling */
+  .form-control {
+    width: 100%; /* Full width */
+    padding: 5px; /* Reduced padding */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding in width */
+    height: 32px; /* Decreased height */
+  }
+  
+  /* Select styling */
+  select.form-control {
+    height: 31.5px; /* Consistent height */
+  }
+  
+  /* Dropdown options styling */
+  select.form-control option {
+    padding: 6px; /* Padding inside options */
+    background-color: #e3e1e1; /* White background */
+    color: #333;
+    font-size: larger;
+    font-weight: 500;
+    border-bottom: 2px solid;
+  
+  }
+  
+  select.form-control option:hover {
+    background-color: #f1f1f1; /* Light gray on hover */
+  }
+  
+  /* Button styling */
+  /* .submit-button {
+    display: block;
+    width: 200px; 
+    padding: 8px; 
+    background-color: #003d03;
+    color: #fff; 
+    border: none;
+    border-radius: 4px;
+    font-size: 18px; 
+    cursor: pointer;
+    margin: 15px auto; 
+    font-weight: 500;
+    text-align: center;
+  } */
+  
+  /* .submit-button:hover {
+    background-color: #45a049; 
+  } */
+  
+  .submit-button {
+    display: block;
+    width: 200px; 
+    padding: 8px; 
+    background-color: #003d03;
+    color: #fff; 
+    border: none;
+    border-radius: 4px;
+    font-size: 18px; 
+    cursor: pointer;
+    margin: 15px auto; 
+    font-weight: 500;
+    text-align: center;
+  }
+  
+  
+  
+  .disabled-button {
+    background-color: gray;
+    cursor: not-allowed;
+  }
+  
+  
+  .branch-heading {
+    text-align: center; /* Center the text */
+    font-size: 24px; /* Font size */
+    font-weight: bold; /* Make the font bold */
+    margin: 10px 0; /* Space above and below the heading */
+    border-bottom: 2px solid #c2c2c2; /* Underline color and thickness */
+    padding-bottom: 10px; /* Space between text and underline */
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 1200px) {
+    .asset-container {
+      padding: 10px;
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .form-row {
+      flex-direction: column; /* Stack form groups vertically */
+    }
+  
+    .form-group {
+      margin-right: 0; /* Remove margin between stacked form groups */
+      margin-bottom: 10px; /* Add space between stacked form groups */
+    }
+  
+    .form-group:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .form-control {
+      padding: 6px;
+      height: 28px; /* Further reduced height */
+    }
+  
+    .submit-button {
+      font-size: 16px; /* Further reduced font size */
+      padding: 6px; /* Further reduced padding */
+      width: 100px; /* Further reduced width */
+    }
+  
+    .branch-heading {
+      font-size: 20px;
+    }
+  }
+  

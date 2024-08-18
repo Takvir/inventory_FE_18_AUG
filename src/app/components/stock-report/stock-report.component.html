@@ -1,0 +1,36 @@
+<div class="asset-container">
+  <div class="text-center mb-4">
+    <h1 class="text-xl font-bold mb-2 inline-block border-b-2 border-gray-300">Stock Report</h1>
+  </div>
+
+
+
+  <div class="table-container">
+    <table class="stock-table">
+      <thead>
+        <tr>
+          <th>Asset Name</th>
+          <th>Number of Devices (Total)</th>
+          <th>Active</th>
+          <th>In Active</th>
+          <th>Faulty</th>
+          <th>Stock In Hand</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let group of groups">
+          <td>{{ group.group_name }}</td>
+          <td>{{ getTotalDevices(group.group_name) }}</td>
+          <td>{{ groupStatusCounts[group.group_name]?.['Active'] || 0 }}</td>
+          <td>{{ groupStatusCounts[group.group_name]?.['InActive'] || 0 }}</td>
+          <td>{{ groupStatusCounts[group.group_name]?.['Faulty'] || 0 }}</td>
+          <td>{{ getStockInHand(group.group_name) }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="download-container">
+    <button (click)="downloadCSV()" class="download-button">Download</button>
+  </div>
+</div>

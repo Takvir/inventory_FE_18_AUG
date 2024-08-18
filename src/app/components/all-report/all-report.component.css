@@ -1,0 +1,79 @@
+/* Table container */
+div {
+  overflow-x: auto; /* Ensure table is scrollable on small screens */
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Table headers and cells */
+th, td {
+  border: 1px solid #ddd;
+  padding: 2px; /* Adjusted padding */
+  text-align: center;
+  font-size: 12px; /* Smaller text size */
+}
+
+/* Header styling */
+th {
+  background-color: #038334;
+  color: #ffffff;
+  font-weight: normal;
+  padding: 10px ;
+  
+}
+
+/* Zebra striping for rows */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Hover effect for rows */
+tr:hover {
+  background-color: #eaeaea;
+}
+
+/* Table header styling */
+thead tr {
+  border-bottom: 2px solid #ddd; /* Distinct border for header */
+}
+
+/* Table footer styling */
+tfoot tr {
+  background-color: #d8e6f0; /* Light green background for totals */
+  color: #007e02; /* Dark green text color */
+  
+}
+
+/* Footer total row styling */
+tfoot td {
+  font-weight: bold; /* Bold text for totals */
+  border-top: 2px solid #ddd; /* Distinct border at the top */
+  padding: 5px; /* Adjusted padding for better appearance */
+}
+/* Download Button Container */
+.download-container {
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+
+/* Download Button */
+.download-button {
+  padding: 7px 25px;
+  background-color: #125830; /* Primary blue color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: center;
+}
+
+.download-button:hover {
+  background-color: #02680b; /* Darker blue on hover */
+}

@@ -1,0 +1,156 @@
+/* Styling for the container */
+.asset-container {
+  max-width: 100%; /* Adjusted width for better layout */
+  margin: auto;
+  padding: 8px;
+  border: 1px solid #e0e0e0; /* Lighter border color */
+  border-radius: 10px;
+  background-color: #fefefe; /* Light gray background for contrast */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+
+/* Header styling */
+.page-header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e0e0e0; /* Light border for the header */
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 600; /* Slightly heavier weight for emphasis */
+  color: #333;
+  margin-top: 15px;
+}
+
+/* Table Container */
+.table-container {
+  overflow-y: auto;
+  max-height: 500px; /* Slightly increased height for better visibility */
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  background-color: #fff; /* White background for the table */
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 6px 8px; /* Increased padding for better readability */
+  border: 1px solid #e0e0e0;
+  text-align: left;
+  font-size: 12px;
+}
+
+th {
+  background-color: #f4f4f4; /* Lighter background for header */
+  position: sticky;
+  top: 0;
+  z-index: 2; /* Higher z-index for header */
+  font-weight: 600; /* Bold header text */
+  text-align: left;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Alternating row colors */
+}
+
+tbody tr:hover {
+  background-color: #e0e0e0; /* Slightly darker hover color */
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap; /* Allows rows to wrap */
+  gap: 15px; /* Space between columns */
+  margin-bottom: 15px; /* Space between rows */
+}
+
+.form-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px; /* Space between label and input */
+  font-weight: 500;
+  color: #555; /* Slightly darker label color */
+}
+
+input,
+select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  height: 38px; /* Slightly taller input height */
+}
+
+button {
+  padding: 10px 20px; /* Increased padding */
+  background-color: #007bff; /* Primary blue color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 150px;
+  margin: 20px auto 0; /* Center button and margin adjustment */
+  font-weight: 600;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Search Container */
+.search-container {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.search-input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 400px; /* Adjust as needed */
+  box-sizing: border-box;
+}
+
+/* Download Button Container */
+.download-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Download Button */
+.download-button {
+  padding: 7px 25px;
+  background-color: #125830; /* Primary blue color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: center;
+}
+
+.download-button:hover {
+  background-color: #02680b; /* Darker blue on hover */
+}
