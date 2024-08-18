@@ -12,7 +12,7 @@ table {
 
 /* Table headers and cells */
 th, td {
-  border: 1px solid #ddd;
+  border: 1px dotted #9e9c9c;
   padding: 2px; /* Adjusted padding */
   text-align: center;
   font-size: 12px; /* Smaller text size */
@@ -28,9 +28,9 @@ th {
 }
 
 /* Zebra striping for rows */
-tr:nth-child(even) {
+/* tr:nth-child(even) {
   background-color: #f9f9f9;
-}
+} */
 
 /* Hover effect for rows */
 tr:hover {

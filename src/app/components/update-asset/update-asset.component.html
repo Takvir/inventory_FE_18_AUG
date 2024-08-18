@@ -46,6 +46,7 @@
         <thead>
           <tr>
             <!-- <th>ID</th> -->
+            <th>S. No.</th>
             <th>Branch</th>
             <th>Sub Branch</th>
             <th>Group</th>
@@ -65,8 +66,9 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let asset of assets">
+          <tr *ngFor="let asset of assets let i = index">
             <!-- <td>{{ asset.asset_id }}</td> -->
+            <td>{{i+1}}</td>
             <td>{{ asset.branch_name }}</td>
             <td>{{ asset.sub_branch }}</td>
             <td>{{ asset.group_name }}</td>
@@ -100,7 +102,7 @@
   <div *ngIf="isEdit" class="fixed inset-0 flex items-center justify-center z-50">
     <div class="modal-overlay absolute inset-0 bg-gray-900 opacity-50"></div>
     <div class="modal-content relative bg-white p-6 rounded-lg shadow-lg w-full max-w-lg">
-      <h2 class="text-xl font-semibold mb-4">TAG ENTRY</h2>
+      <h2 class="text-xl font-semibold mb-4">Update Asset</h2>
       <form [formGroup]="editAssetForm" (ngSubmit)="onSubmit()">
   
 

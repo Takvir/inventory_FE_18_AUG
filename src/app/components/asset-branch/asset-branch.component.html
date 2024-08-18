@@ -38,6 +38,7 @@
     <table class="asset-table">
       <thead>
         <tr>
+          <th>S. No.</th>
           <th>Branch Name</th>
           <th>Group Name</th>
           <th>Desktop Name</th>
@@ -53,7 +54,8 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let asset of assets">
+        <tr *ngFor="let asset of assets let i = index" >
+          <td>{{i+1}}</td>
           <td>{{ asset.branch_name }}</td>
           <td>{{ asset.group_name }}</td>
           <td>{{ asset.desktop_name }}</td>

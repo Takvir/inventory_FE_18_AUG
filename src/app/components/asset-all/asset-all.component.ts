@@ -92,7 +92,7 @@ export class AssetAllComponent implements OnInit {
 
   convertToCSV(assets: Asset[]): string {
     const header = [
-      'Sl No.', 'Branch Name', 'Sub Branch Name', 'Group Name', 'Desktop Name', 'Configuration', 
+      'Sl No.', 'Branch Name', 'Sub Branch Name', 'Group Name', 'Device Name', 'Configuration', 
       'Price', 'Serial Number', 'Warranty', 'Purchase Date', 'Status', 'Purchase From', 'Tag Name'
     ].join(',') + '\n';
 

@@ -44,9 +44,9 @@ body {
     transition: background-color 0.3s;
   }
 
-  header nav ul li a:hover {
-    background-color: #4a5568;
-  }
+  /* header nav ul li a:hover {
+    background-color: #010102;
+  } */
 
   header button svg {
     fill: white;
@@ -120,8 +120,15 @@ body {
 
   .sing-out{
     cursor: pointer;
-    color: white;
-    background-color: #035d48;
-    border-radius: 10%;
+    color: black;
+    background-color: #ffffff;
+    border-radius: 20px;
     padding: 0 8px;
+    border-color: blue;
+  }
+
+  .sing-out:hover{
+    background-color: #045d56;
+    color: white;
+  
   }

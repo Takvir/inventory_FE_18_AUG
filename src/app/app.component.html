@@ -100,7 +100,7 @@
   <!-- Main Content Area -->
   <div class="w-full">
     <!-- Header -->
-    <header class="bg-green-200 text-white p-2 flex justify-between items-center">
+    <header class="bg-gradient-to-r from-lime-500 to-green-950 text-white p-2 flex justify-between items-center">
       <div class="md:hidden">
         <button (click)="toggleNav()" class="focus:outline-none">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -115,13 +115,13 @@
       </nav>
       <nav [ngClass]="{'hidden': !navOpen, 'block': navOpen}" class="w-full md:flex md:items-center md:w-auto">
         <ul class="flex flex-col md:flex-row md:space-x-4 mt-4 md:mt-0 sing-out">
-          <li><a (click)="signOut()" style=" box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;" class="block  px-4  rounded-md text-white sing-out">Log Out <i class="fa fa-sign-out" style="font-size:15px"></i></a></li>
+          <li><a (click)="signOut()" class="block px-4 rounded-md text-white sing-out" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; padding: 2px;">Log Out <i class="fa fa-sign-out" style="font-size:15px"></i></a></li>
         </ul>
       </nav>
     </header>
-
+    
     <!-- Router Outlet -->
-    <div class="flex-1 bg-gray-100 p-6 overflow-hidden">
+    <div class="flex-1 bg-gray-50 p-6 overflow-hidden h-full">
 
    
         <router-outlet></router-outlet>

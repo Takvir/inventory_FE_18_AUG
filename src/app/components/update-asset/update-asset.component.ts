@@ -147,7 +147,7 @@ export class UpdateAssetComponent implements OnInit {
       ];
       this.viewAssetsForm.get('sub_branch')?.enable();
     } else {
-      this.subBranchOptions = ['Select Division'];
+      this.subBranchOptions = ['N/A'];
       this.viewAssetsForm.get('sub_branch')?.disable();
       this.viewAssetsForm.patchValue({ sub_branch: 'Select Division' });
     }
@@ -236,7 +236,7 @@ export class UpdateAssetComponent implements OnInit {
         this.tagService.updateAsset(this.editAssetId, this.editAssetForm.value).subscribe(() => {
           this.loadAssets();
           this.resetForm();
-          window.confirm('FAD added successfully!');
+          window.confirm('Asset Updated Successfully!');
 
         });
       }

@@ -13,7 +13,8 @@
 .asset-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 16px;
+  margin-left: 140px;
 }
 
 .form-row {
@@ -24,6 +25,14 @@
 
 .form-group {
   flex: 1;
+  min-width: 200px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
 }
 
 .form-group-inline {
@@ -31,12 +40,12 @@
 }
 
 .form-control {
+  width: 100%; /* Adjusted width to full container */
+  padding: 7px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  padding: 8px;
-  width: 100%;
+  font-size: 14px;
 }
-
 .submit-button {
   padding: 8px 12px; /* Adjusted padding for smaller height */
   border: none;
@@ -85,9 +94,9 @@
 }
 
 /* Zebra striping for rows */
-.asset-table tr:nth-child(even) {
+/* .asset-table tr:nth-child(even) {
   background-color: #f9f9f9;
-}
+} */
 
 /* Hover effect for rows */
 .asset-table tr:hover {

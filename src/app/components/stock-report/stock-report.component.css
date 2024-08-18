@@ -28,7 +28,7 @@
 
 /* Table header and cell styling */
 .stock-table th, .stock-table td {
-  border: 1px solid #ddd;
+  border: 1px dotted #252424;
   padding: 3px;
   text-align: center;
   font-size: 13px;
@@ -36,16 +36,18 @@
 
 /* Header styling */
 .stock-table th {
-  background-color: #f2f2f2;
-  font-weight: bold;
-  font-size: 13px;
+  background-color: #1b8f38;
+  font-weight: normal;
+  font-size: 14px;
+  color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 /* Zebra striping for rows */
-.stock-table tbody tr:nth-child(even) {
+/* .stock-table tbody tr:nth-child(even) {
   background-color: #f9f9f9;
   font-size: 13px;
-}
+} */
 
 /* Hover effect for rows */
 .stock-table tbody tr:hover {
