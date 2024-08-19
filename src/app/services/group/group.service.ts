@@ -23,7 +23,7 @@ export interface Group2 {
 })
 export class GroupService {
 
-  private apiUrl = 'http://localhost:3000/api/groups';
+  private apiUrl = 'http://11.11.7.41:3000/api/groups';
 
   constructor(private http: HttpClient) { }
 

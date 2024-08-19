@@ -40,16 +40,17 @@
         <tr>
           <th>S. No.</th>
           <th>Branch Name</th>
-          <th>Group Name</th>
+          <th>Division</th>
+          <th>Asset Group</th>
           <th>Desktop Name</th>
           <th>Configuration</th>
           <th>Tag Name</th>
-          <th>Warranty</th>
+          <th>Warranty (End of Support)</th>
           <th>Price</th>
           <th>Purchase Date</th>
           <th>Status</th>
           <th>Serial Number</th>
-          <th>Sub Branch</th>
+          
           <th>Asset Value</th> <!-- New Column -->
         </tr>
       </thead>
@@ -57,6 +58,7 @@
         <tr *ngFor="let asset of assets let i = index" >
           <td>{{i+1}}</td>
           <td>{{ asset.branch_name }}</td>
+          <td>{{ asset.sub_branch }}</td>
           <td>{{ asset.group_name }}</td>
           <td>{{ asset.desktop_name }}</td>
           <td>{{ asset.configuration }}</td>
@@ -66,7 +68,7 @@
           <td>{{ asset.purchase_date | date }}</td>
           <td>{{ asset.status }}</td>
           <td>{{ asset.serial_number }}</td>
-          <td>{{ asset.sub_branch }}</td>
+          
           <td>{{ calculateAssetValue(asset.purchase_date, asset.price) }}</td> <!-- New Column Value -->
         </tr>
       </tbody>

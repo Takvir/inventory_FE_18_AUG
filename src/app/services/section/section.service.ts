@@ -61,7 +61,7 @@ interface UpdateAsset {
   providedIn: 'root'
 })
 export class SectionService {
-  private apiUrl = 'http://localhost:3000/api/assets';
+  private apiUrl = 'http://11.11.7.41:3000/api/assets';
 
   constructor(private http: HttpClient) { }
 

@@ -9,7 +9,7 @@
     <thead>
       <tr class="bg-gray-100 text-gray-600 border-b text-center">
         <th class="py-1 px-2 ">Group ID</th>
-        <th class="py-1 px-4 ">Group Name</th>
+        <th class="py-1 px-4 ">Asset Group</th>
         <th class="py-1 px-4 ">Stock In Hand</th>
         <th class="py-1 px-4 ">Actions</th>
       </tr>
@@ -37,7 +37,7 @@
       <h2 class="text-xl font-semibold mb-4">{{ selectedGroup ? 'Update Group' : 'Add New Group' }}</h2>
       <form [formGroup]="groupForm" (ngSubmit)="selectedGroup ? updateGroup() : addGroup()">
         <label class="block mb-2">
-          <span class="text-gray-700">Group Name:</span>
+          <span class="text-gray-700">Asset Group:</span>
           <input formControlName="group_name" class="mt-1 block w-full border border-gray-300 py-1  " />
         </label>
         <label class="block mb-4">
