@@ -4,6 +4,17 @@
     <h1 class="text-xl font-bold mb-2 inline-block border-b-2 border-gray-300">Summary Report</h1>
   </div>
 
+  <!-- Search Input -->
+  <div class="mb-4 search-container">
+    <input
+      type="text"
+      placeholder="Search Branch Name..."
+      [(ngModel)]="searchTerm"
+      (input)="filterData()"
+      class="border p-2 rounded w-3/12"
+    />
+  </div>
+
   <!-- Table -->
   <table>
     <thead>
@@ -14,7 +25,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let branch of branches">
+      <tr *ngFor="let branch of filteredBranches">
         <td style="box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;">{{ branch.branch_name }}</td>
         <td *ngFor="let group of groups">
           {{ assetCounts[branch.branch_name][group.group_name] || 0 }}

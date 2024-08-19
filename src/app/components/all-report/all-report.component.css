@@ -24,7 +24,7 @@ th {
   color: #ffffff;
   font-weight: normal;
   padding: 10px ;
-  
+
 }
 
 /* Zebra striping for rows */
@@ -46,7 +46,7 @@ thead tr {
 tfoot tr {
   background-color: #d8e6f0; /* Light green background for totals */
   color: #007e02; /* Dark green text color */
-  
+
 }
 
 /* Footer total row styling */
@@ -76,4 +76,10 @@ tfoot td {
 
 .download-button:hover {
   background-color: #02680b; /* Darker blue on hover */
+}
+
+.search-container {
+  margin-bottom: 20px;
+  text-align: center;
+  color: black;
 }

@@ -49,6 +49,8 @@ export class AllReportComponent implements OnInit {
   rowTotals: { [branchName: string]: number } = {};
   columnTotals: { [groupName: string]: number } = {};
   grandTotal: number = 0;
+  searchTerm: string = '';
+  filteredBranches: Branch[] = [];
 
   constructor(
     private assetService: SectionService,
@@ -64,6 +66,7 @@ export class AllReportComponent implements OnInit {
   loadBranches(): void {
     this.branchService.getBranches().subscribe((data: Branch[]) => {
       this.branches = data;
+      this.filteredBranches = this.branches;
       this.loadAssets();
     });
   }
@@ -110,6 +113,14 @@ export class AllReportComponent implements OnInit {
         this.grandTotal++;
       }
     });
+
+    this.filterData(); // Apply search filter initially
+  }
+
+  filterData(): void {
+    this.filteredBranches = this.branches.filter(branch =>
+      branch.branch_name.toLowerCase().includes(this.searchTerm.toLowerCase())
+    );
   }
 
   downloadTableData(): void {
@@ -128,7 +139,7 @@ export class AllReportComponent implements OnInit {
     const header = ['Branch Name', ...this.groups.map(group => group.group_name), 'Total'].join(',') + '\n';
 
     // Create CSV rows
-    const rows = this.branches.map(branch => [
+    const rows = this.filteredBranches.map(branch => [
       branch.branch_name,
       ...this.groups.map(group => this.assetCounts[branch.branch_name][group.group_name] || 0),
       this.rowTotals[branch.branch_name] || 0
